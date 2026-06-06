@@ -66,7 +66,7 @@ export default function LovedCoursesSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <h2 className="text-center font-serif text-4xl font-semibold text-[#2D2118] md:text-5xl">
-          Courses people loved ❤️❤️
+          Courses people loved
         </h2>
 
         <div className="relative mt-12">
