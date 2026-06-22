@@ -33,27 +33,26 @@ function CountUp({ value, suffix }: { value: number; suffix: string }) {
   const isInView = useInView(ref, { once: false, margin: "-80px" });
 
   useEffect(() => {
-    if (!isInView) {
-      setCount(0);
-      return;
-    }
+    if (!isInView) return;
 
-    let start = 0;
     const duration = 1400;
-    const increment = value / (duration / 16);
+    let frameId = 0;
+    let startTime: number | null = null;
 
-    const timer = setInterval(() => {
-      start += increment;
+    const animate = (timestamp: number) => {
+      startTime ??= timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
 
-      if (start >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
+      setCount(Math.floor(progress * value));
+
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(animate);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
+    frameId = window.requestAnimationFrame(animate);
+
+    return () => window.cancelAnimationFrame(frameId);
   }, [isInView, value]);
 
   return (

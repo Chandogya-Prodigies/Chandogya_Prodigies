@@ -27,19 +27,27 @@ const slides = [
 const cornerImages = [
   {
     src: "/images/top-left.png",
+    width: 551,
+    height: 452,
     className: "left-0 top-0 w-[185px] sm:w-[260px] lg:w-[360px] xl:w-[420px]",
   },
   {
     src: "/images/top-right.png",
+    width: 551,
+    height: 452,
     className: "right-0 top-0 w-[185px] sm:w-[260px] lg:w-[360px] xl:w-[420px]",
   },
   {
     src: "/images/bottom-left.png",
+    width: 693,
+    height: 360,
     className:
       "bottom-0 left-0 w-[165px] sm:w-[230px] lg:w-[310px] xl:w-[350px]",
   },
   {
-    src: "/images/bottom-right.png",
+    src: "/images/bottom-right1.png",
+    width: 682,
+    height: 366,
     className:
       "bottom-0 right-0 w-[165px] sm:w-[230px] lg:w-[310px] xl:w-[350px]",
   },
@@ -79,8 +87,8 @@ export default function HeroSection() {
           <Image
             src={image.src}
             alt=""
-            width={420}
-            height={420}
+            width={image.width}
+            height={image.height}
             priority
             className="h-auto w-full object-contain"
           />

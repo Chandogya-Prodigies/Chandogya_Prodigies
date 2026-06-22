@@ -80,7 +80,7 @@ export default function LovedCoursesSection() {
 
           <Swiper
             modules={[Navigation, Autoplay]}
-            loop
+            rewind
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,

@@ -97,7 +97,7 @@ export default function DemoVideoSection() {
             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
             effect="coverflow"
             centeredSlides
-            loop
+            rewind
             autoplay={{
               delay: 6000,
               disableOnInteraction: false,

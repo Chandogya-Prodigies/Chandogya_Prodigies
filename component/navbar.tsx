@@ -331,11 +331,8 @@ export default function Navbar() {
             aria-label="Toggle colour theme"
             className="flex h-10 w-10 items-center justify-center rounded-md text-[#3C291C] transition hover:bg-white/25 dark:text-[#E9D5B7] dark:hover:bg-white/10"
           >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
+            <Sun className="hidden h-5 w-5 dark:block" />
+            <Moon className="h-5 w-5 dark:hidden" />
           </button>
 
           <Link
