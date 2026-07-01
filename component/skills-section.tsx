@@ -33,7 +33,7 @@ export default function SkillsSection() {
   const visibleSkills = showMore ? skills : skills.slice(0, 2);
 
   return (
-    <section className="relative overflow-hidden bg-[#F7EAD7] px-6 py-20 dark:bg-[#160A05]">
+    <section className="relative overflow-hidden bg-[#FFF9EE] px-6 py-20 dark:bg-[#160A05]">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center font-serif text-3xl font-bold text-[#2D2118] dark:text-[#F8E7B0]">
           Skills You Will Learn

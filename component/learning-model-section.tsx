@@ -3,15 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 const models = {
   online: {
-    label: "Online Learning",
+    label: "Online",
+    eyebrow: "Online Learning",
     title: "Learn From Anywhere",
     image: "/images/images.jpg",
     description:
-      "A flexible digital learning experience where students can access recorded lessons, assignments, quizzes and live mentorship from home.",
+      "A flexible digital learning experience where students access lessons, assignments, quizzes and live mentorship from home.",
     points: [
       "Recorded video lessons",
       "Live interactive sessions",
@@ -20,7 +21,8 @@ const models = {
     ],
   },
   offline: {
-    label: "Offline Gurukul",
+    label: "Offline",
+    eyebrow: "Offline Gurukul",
     title: "Learn Through Experience",
     image: "/images/offline.jpg",
     description:
@@ -33,11 +35,12 @@ const models = {
     ],
   },
   hybrid: {
-    label: "Hybrid Model",
+    label: "Hybrid",
+    eyebrow: "Hybrid Model",
     title: "Best of Both Worlds",
     image: "/images/kit.jpg",
     description:
-      "A blended learning approach combining online flexibility with offline Gurukul experiences, creating a complete skill-building journey.",
+      "A blended learning approach combining online flexibility with offline Gurukul experiences for a complete skill-building journey.",
     points: [
       "Online + offline learning",
       "Workshop-based practice",
@@ -54,67 +57,69 @@ export default function LearningModelSection() {
   const model = models[active];
 
   return (
-    <section className="relative overflow-hidden bg-[#F7EAD7] px-6 py-24 dark:bg-[#100603] h-270">
-      <div className="absolute -left-24 top-20 h-64 w-64 rounded-full bg-[#E0BE5A]/30 blur-3xl" />
-      <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[#D4AF37]/20 blur-3xl" />
+    <section className="relative overflow-hidden bg-[#EEF3E4] px-5 py-16 text-[#2E2118] transition-colors duration-500 dark:bg-[#160C07] dark:text-[#F8EBCF] sm:px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(255,253,247,0.92)_0%,transparent_34%),radial-gradient(circle_at_82%_18%,rgba(212,167,44,0.24)_0%,transparent_28%),linear-gradient(135deg,#F8E7CF_0%,#EEF3E4_44%,#DDE8D1_100%)] dark:bg-[radial-gradient(circle_at_16%_12%,#2A1910_0%,transparent_34%),radial-gradient(circle_at_82%_18%,rgba(212,167,44,0.13)_0%,transparent_28%),linear-gradient(135deg,#160C07_0%,#1D140D_48%,#132118_100%)]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#315C45]/35 to-transparent dark:via-[#D4A72C]/35" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="text-center">
-          <p className="font-serif text-lg font-semibold tracking-[0.3em] text-[#B96A1B] dark:text-[#D4AF37]">
-            HOW WE TEACH
-          </p>
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+          <div>
+            <p className="font-serif text-sm font-semibold tracking-[0.22em] text-[#C96F1A] sm:text-base dark:text-[#D4A72C]">
+              HOW WE TEACH
+            </p>
 
-          <h2 className="mt-3 font-serif text-5xl font-semibold text-[#2D2118] md:text-6xl dark:text-[#F8E7B0]">
-            The Learning Model
-          </h2>
+            <h2 className="mt-2 font-serif text-4xl font-semibold leading-tight text-[#2E2118] md:text-5xl dark:text-[#F8EBCF]">
+              The Learning Model
+            </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#5B4A3A] dark:text-[#E8D6B0]">
-            Choose the learning path that fits every student’s journey — online,
-            offline or a complete hybrid Gurukul experience.
-          </p>
+            <p className="mt-3 max-w-xl text-base leading-7 text-[#6B5646] dark:text-[#CDBB9E]">
+              Choose the learning path that fits every student&apos;s journey:
+              online, offline or a complete hybrid Gurukul experience.
+            </p>
+
+            <div className="mt-4 h-px w-20 bg-[#D4A72C]/65" />
+          </div>
+
+          <div className="flex rounded-md border border-[#D4A72C]/25 bg-[#FFFDF7]/80 p-1.5 shadow-[0_14px_34px_rgba(95,52,8,0.08)] backdrop-blur-sm dark:border-[#D4A72C]/18 dark:bg-[#21130C]/75">
+            {(Object.keys(models) as ModelKey[]).map((key) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setActive(key)}
+                className={`flex-1 rounded-md px-3 py-2.5 text-sm font-semibold transition-all duration-300 sm:text-base ${
+                  active === key
+                    ? "bg-[#315C45] text-white shadow-[0_10px_22px_rgba(49,92,69,0.2)]"
+                    : "text-[#6B5646] hover:bg-[#F8E7CF] dark:text-[#CDBB9E] dark:hover:bg-[#2A1910]"
+                }`}
+              >
+                {models[key].label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Tabs */}
-        <div className="mx-auto mt-8 flex max-w-3xl rounded-full border border-[#D4AF37]/40 bg-white/35 p-2 shadow-lg backdrop-blur-md dark:bg-white/5">
-          {(Object.keys(models) as ModelKey[]).map((key) => (
-            <button
-              key={key}
-              onClick={() => setActive(key)}
-              className={`flex-1 rounded-full px-4 py-3 font-serif text-lg font-semibold transition-all duration-300 ${
-                active === key
-                  ? "bg-[#C89A3D] text-white shadow-md dark:bg-[#D4AF37] dark:text-[#160A05]"
-                  : "text-[#2D2118] hover:bg-white/40 dark:text-[#F8E7B0] dark:hover:bg-white/10"
-              }`}
-            >
-              {models[key].label}
-            </button>
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="mt-14 grid items-center gap-12 lg:grid-cols-2">
+        <div className="mt-8 grid overflow-hidden rounded-md border border-[#315C45]/18 bg-[#FFFDF7]/86 shadow-[0_18px_50px_rgba(49,92,69,0.13)] backdrop-blur-sm lg:grid-cols-[0.95fr_1.05fr] dark:border-[#D4A72C]/18 dark:bg-[#21130C]/82 dark:shadow-[0_18px_55px_rgba(0,0,0,0.28)]">
           <AnimatePresence mode="wait">
             <motion.div
               key={`image-${active}`}
-              initial={{ opacity: 0, x: -40, scale: 0.96 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: 40, scale: 0.96 }}
-              transition={{ duration: 0.55, ease: "easeOut" }}
-              className="relative h-[420px] overflow-hidden rounded-[36px] border border-[#D4AF37]/35 bg-[#FFF4D8]/50 shadow-[0_25px_70px_rgba(64,31,9,0.25)]"
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.02 }}
+              transition={{ duration: 0.42, ease: "easeOut" }}
+              className="relative min-h-[260px] lg:min-h-[390px]"
             >
               <Image
                 src={model.image}
                 alt={model.title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#160C07]/68 via-transparent to-transparent" />
 
-              <div className="absolute bottom-6 left-6 rounded-2xl bg-white/85 px-5 py-3 backdrop-blur-md">
-                <p className="font-serif text-xl font-semibold text-[#2D2118]">
-                  {model.label}
-                </p>
+              <div className="absolute bottom-4 left-4 rounded-md border border-[#F8EBCF]/25 bg-[#160C07]/45 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#F8EBCF] backdrop-blur-md">
+                {model.eyebrow}
               </div>
             </motion.div>
           </AnimatePresence>
@@ -122,35 +127,39 @@ export default function LearningModelSection() {
           <AnimatePresence mode="wait">
             <motion.div
               key={`content-${active}`}
-              initial={{ opacity: 0, y: 35 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -25 }}
-              transition={{ duration: 0.55, ease: "easeOut" }}
-              className="rounded-[36px] border border-[#D4AF37]/35 bg-white/45 p-8 shadow-[0_20px_60px_rgba(64,31,9,0.12)] backdrop-blur-md dark:bg-white/5"
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.42, ease: "easeOut" }}
+              className="flex flex-col justify-center p-5 sm:p-7 lg:p-8"
             >
-              <h3 className="font-serif text-4xl font-semibold text-[#2D2118] md:text-5xl dark:text-[#F8E7B0]">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#C96F1A] dark:text-[#D4A72C]">
+                {model.eyebrow}
+              </p>
+
+              <h3 className="mt-2 font-serif text-3xl font-semibold leading-tight text-[#2E2118] sm:text-4xl dark:text-[#F8EBCF]">
                 {model.title}
               </h3>
 
-              <p className="mt-5 text-lg leading-relaxed text-[#5B4A3A] dark:text-[#E8D6B0]">
+              <p className="mt-4 text-base leading-7 text-[#6B5646] dark:text-[#CDBB9E]">
                 {model.description}
               </p>
 
-              <div className="mt-8 grid gap-4">
+              <div className="mt-5 grid gap-2 sm:grid-cols-2">
                 {model.points.map((point) => (
                   <div
                     key={point}
-                    className="flex items-center gap-3 rounded-2xl bg-[#FFF4D8]/70 px-4 py-3 text-[#2D2118] dark:bg-white/10 dark:text-[#F8E7B0]"
+                    className="flex items-center gap-2 rounded-md border border-[#D4A72C]/18 bg-[#FFF9EE] px-3 py-2.5 text-[#2E2118] dark:border-[#D4A72C]/14 dark:bg-[#160C07] dark:text-[#F8EBCF]"
                   >
-                    <CheckCircle className="h-5 w-5 text-[#B96A1B] dark:text-[#D4AF37]" />
-                    <span className="text-base font-medium">{point}</span>
+                    <CheckCircle className="h-4 w-4 shrink-0 text-[#315C45] dark:text-[#D4A72C]" />
+                    <span className="text-sm font-medium">{point}</span>
                   </div>
                 ))}
               </div>
 
-              <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C89A3D] px-7 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-[#9A461A] dark:bg-[#D4AF37] dark:text-[#160A05]">
+              <button className="mt-6 inline-flex h-11 w-fit items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]">
                 Explore Model
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4" />
               </button>
             </motion.div>
           </AnimatePresence>

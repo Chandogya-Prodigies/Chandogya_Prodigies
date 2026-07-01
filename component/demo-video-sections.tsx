@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -50,30 +51,43 @@ export default function DemoVideoSection() {
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.25),transparent_35%)]" />
 
-      {/* Illustrations */}
-      <Image
-        src="/images/flowers.png"
-        alt=""
-        width={220}
-        height={300}
+      {/* Floating particles */}
+      <motion.div
+        animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.2, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute left-1/4 top-20 h-4 w-4 rounded-full bg-white/30 blur-sm"
+      />
+
+      <motion.div
+        animate={{ opacity: [0.2, 0.6, 0.2], y: [0, -20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute right-1/3 bottom-20 h-5 w-5 rounded-full bg-[#D4AF37]/30 blur-sm"
+      />
+
+      {/* Animated illustrations */}
+      <motion.div
+        animate={{ y: [0, -15, 0], rotate: [0, 2, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute bottom-0 left-0 z-0 opacity-80"
-      />
+      >
+        <Image src="/images/flowers.png" alt="" width={220} height={300} />
+      </motion.div>
 
-      <Image
-        src="/images/leaves.png"
-        alt=""
-        width={180}
-        height={150}
+      <motion.div
+        animate={{ y: [0, 12, 0], rotate: [0, -4, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute right-20 top-10 z-0 opacity-80"
-      />
+      >
+        <Image src="/images/leaves.png" alt="" width={180} height={150} />
+      </motion.div>
 
-      <Image
-        src="/images/flower.png"
-        alt=""
-        width={170}
-        height={220}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [0, -3, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute bottom-0 right-6 z-0 opacity-70"
-      />
+      >
+        <Image src="/images/flower.png" alt="" width={170} height={220} />
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-6xl text-center">
         <h2 className="font-serif text-5xl font-semibold text-[#2D2118] md:text-6xl dark:text-[#F8E7B0]">
@@ -118,15 +132,9 @@ export default function DemoVideoSection() {
               slideShadows: false,
             }}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
             className="pb-14"
           >
@@ -161,6 +169,7 @@ export default function DemoVideoSection() {
                         <h3 className="font-serif text-xl font-bold leading-tight text-white">
                           {video.title}
                         </h3>
+
                         <p className="mt-1 text-xs text-white/80">
                           {video.mentor} • {video.views}
                         </p>
