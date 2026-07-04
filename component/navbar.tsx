@@ -243,10 +243,10 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt=""
-            width={64}
-            height={64}
+            width={100}
+            height={100}
             priority
-            className="h-14 w-14 object-contain"
+            className="h-22 w-22 object-contain"
           />
           <span className="hidden w-32 font-serif text-[18px] font-bold leading-[1.05] text-[#2a2323] sm:block dark:text-[#F8EBCF]">
             Chandogya Prodigies
@@ -264,8 +264,8 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMenu(null)}
               className={`rounded-md px-3 py-2 text-md font-semibold transition ${
                 isActiveLink(link.href)
-                  ? "bg-white/25 text-[#2E2118] dark:bg-white/10 dark:text-[#F8EBCF]"
-                  : "text-[#3C291C] hover:bg-white/20 hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
+                  ? "bg-white text-[#2E2118] dark:bg-white/10 dark:text-[#F8EBCF]"
+                  : "text-[#3C291C] hover:bg-white hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
               }`}
             >
               {link.label}
@@ -287,8 +287,8 @@ export default function Navbar() {
               aria-controls="primary-mega-menu"
               className={`flex items-center gap-1.5 rounded-md px-3 py-2 text-md font-semibold transition ${
                 activeMenu === trigger.key
-                  ? "bg-white/25 text-[#2E2118] dark:bg-white/10 dark:text-[#F8EBCF]"
-                  : "text-[#3C291C] hover:bg-white/20 hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
+                  ? "bg-white text-[#2E2118] dark:bg-white/10 dark:text-[#F8EBCF]"
+                  : "text-[#3C291C] hover:bg-white hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
               }`}
             >
               {trigger.label}
@@ -303,14 +303,14 @@ export default function Navbar() {
           <Link
             href="/resources/schools"
             onMouseEnter={() => setActiveMenu(null)}
-            className="rounded-md px-3 py-2 text-md font-semibold text-[#3C291C] transition hover:bg-white/20 hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
+            className="rounded-md px-3 py-2 text-md font-semibold text-[#3C291C] transition hover:bg-white hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
           >
             Partnerships
           </Link>
           <Link
             href="/contact"
             onMouseEnter={() => setActiveMenu(null)}
-            className="rounded-md px-3 py-2 text-md font-semibold text-[#3C291C] transition hover:bg-white/20 hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
+            className="rounded-md px-3 py-2 text-md font-semibold text-[#3C291C] transition hover:bg-white hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
           >
             Contact
           </Link>
@@ -523,7 +523,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={closeNavigation}
-                className="rounded-md px-4 py-3 text-sm font-bold text-[#2E2118] hover:bg-[#F8E7CF] dark:text-[#F8EBCF] dark:hover:bg-white/5"
+                className="rounded-md px-4 py-3 text-sm font-bold text-[#2E2118] hover:bg-[white] dark:text-[#F8EBCF] dark:hover:bg-white/5"
               >
                 {link.label}
               </Link>

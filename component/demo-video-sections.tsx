@@ -47,7 +47,7 @@ const videos = [
 
 export default function DemoVideoSection() {
   return (
-    <section className="relative overflow-hidden bg-[#E0BE5A] px-6 py-20 dark:bg-[#170A04]">
+    <section className="relative overflow-hidden bg-[#f3a548eb] px-6 py-20 dark:bg-[#170A04]">
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.25),transparent_35%)]" />
 

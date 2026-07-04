@@ -16,17 +16,17 @@ const stories = [
     text: "Modern education often teaches children what to remember, but not always how to think, question and understand life deeply.",
     cloudClass:
       "left-1/2 top-8 w-[min(88vw,500px)] lg:left-[32%] lg:top-[-8%] lg:w-[540px]",
-    contentClass: "px-14 pb-8 pt-16 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
+    contentClass: "px-14 pb-4 pt-16 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
   },
   {
     video: "/videos/video02.mp4",
     cloud: "/images/clouds.png",
     label: "The Origin",
-    title: "A Return to Gurukul Wisdom",
+    title: "Return to Gurukul ",
     text: "Chandogya Prodigies brings back mentorship, discipline, curiosity and learning through real experiences.",
     cloudClass:
-      "left-1/2 top-8 w-[min(88vw,500px)] lg:left-[76%] lg:top-[-9%] lg:w-[560px]",
-    contentClass: "px-14 pb-8 pt-16 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
+      "left-1/2 top-9 w-[min(88vw,500px)] lg:left-[76%] lg:top-[-9%] lg:w-[560px]",
+    contentClass: "px-10 pb-4 pt-20 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
   },
   {
     video: "/videos/video03.mp4",
@@ -35,8 +35,8 @@ const stories = [
     title: "Prepared for the Future",
     text: "We blend ancient Indian wisdom with modern skills so children become confident, thoughtful and future-ready learners.",
     cloudClass:
-      "left-1/2 top-8 w-[min(88vw,500px)] lg:left-[25%] lg:top-[-9%] lg:w-[560px]",
-    contentClass: "px-14 pb-8 pt-16 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
+      "left-1/2 top-9 w-[min(88vw,500px)] lg:left-[25%] lg:top-[-9%] lg:w-[560px]",
+    contentClass: "px-14 pb-4 pt-16 sm:px-20 sm:pt-20 lg:px-24 lg:pt-24",
   },
 ];
 
@@ -77,15 +77,7 @@ export default function StorySection() {
         </div>
 
         <div className="relative h-[620px] w-full overflow-hidden border-y border-[#D4A72C]/25 bg-[#2E2118] shadow-[0_24px_70px_rgba(64,31,9,0.18)] sm:h-[590px] lg:h-[560px] dark:border-[#D4A72C]/20 dark:bg-[#0C0503] dark:shadow-[0_24px_70px_rgba(0,0,0,0.45)]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={story.video}
-              initial={{ opacity: 0, scale: 1.03 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.02 }}
-              transition={{ duration: 0.75, ease: "easeOut" }}
-              className="absolute inset-0"
-            >
+          <AnimatePresence mode="wait"> <motion.div key={story.video} initial={{ opacity: 0, scale: 1.03 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.02 }} transition={{ duration: 0.75, ease: "easeOut" }} className="absolute inset-0" >
               <video
                 key={story.video}
                 src={story.video}
@@ -99,6 +91,7 @@ export default function StorySection() {
                 style={{
                   filter: "brightness(0.82) saturate(0.96)",
                 }}
+                
               />
             </motion.div>
           </AnimatePresence>
@@ -106,43 +99,48 @@ export default function StorySection() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,12,7,0.42),rgba(22,12,7,0.08)_45%,rgba(22,12,7,0.34)),linear-gradient(0deg,rgba(22,12,7,0.42),transparent_45%)]" />
           <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#FFF9EE]/12 to-transparent dark:from-[#D4A72C]/8" />
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`cloud-${active}`}
-              initial={{ opacity: 0, scale: 0.86, y: 35 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.92, y: -20 }}
-              transition={{ duration: 0.65, ease: "easeOut" }}
-              className={`absolute z-20 -translate-x-1/2 ${story.cloudClass}`}
-            >
-              <div className="relative">
-                <Image
-                  src={story.cloud}
-                  alt=""
-                  width={700}
-                  height={420}
-                  className="w-full object-contain opacity-[0.94] drop-shadow-[0_18px_45px_rgba(0,0,0,0.22)]"
-                  priority
-                />
+        <AnimatePresence mode="wait">
+  <motion.div
+    key={`cloud-${active}`}
+    initial={{ opacity: 0, scale: 0.86, y: 35 }}
+    animate={{ opacity: 1, scale: 1, y: 0 }}
+    exit={{ opacity: 0, scale: 0.92, y: -20 }}
+    transition={{ duration: 0.65, ease: "easeOut" }}
+    className={`absolute z-20 -translate-x-1/2 ${story.cloudClass}`}
+  >
+    <div className="relative">
+      {/* Transparent Cloud */}
+      <Image
+        src={story.cloud}
+        alt=""
+        width={700}
+        height={420}
+        priority
+        className="w-full object-contain drop-shadow-[0_18px_45px_rgba(0,0,0,0.22)]"
+        style={{
+          opacity: 0.65, // <-- Adjust this value (0.4 - 1)
+        }}
+      />
 
-                <div
-                  className={`absolute inset-0 flex flex-col items-center justify-center text-center ${story.contentClass}`}
-                >
-                  <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#C96F1A]">
-                    {story.label}
-                  </p>
+      {/* Content stays fully visible */}
+      <div
+        className={`absolute inset-0 flex flex-col items-center justify-center text-center ${story.contentClass}`}
+      >
+        <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#C96F1A]">
+          {story.label}
+        </p>
 
-                  <h3 className="mt-2 max-w-[26rem] font-serif text-xl font-semibold leading-tight text-[#2E2118] sm:text-2xl">
-                    {story.title}
-                  </h3>
+        <h3 className="mt-2 max-w-[26rem] font-serif text-xl font-semibold leading-tight text-[#2E2118] sm:text-2xl">
+          {story.title}
+        </h3>
 
-                  <p className="mt-3 max-w-[22rem] text-sm leading-6 text-[#6B5646] sm:text-base">
-                    {story.text}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+        <p className="mt-3 max-w-[22rem] text-sm leading-6 text-[#6B5646] sm:text-base">
+          {story.text}
+        </p>
+      </div>
+    </div>
+  </motion.div>
+</AnimatePresence>
 
           <button
             onClick={prevSlide}
