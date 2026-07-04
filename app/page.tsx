@@ -12,7 +12,7 @@ import Footer from "@/component/ui/footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+  
 
       <HeroSection />
       <SkillsSection />
@@ -22,7 +22,7 @@ export default function Home() {
       <LovedCoursesSection />
       <LearningModelSection />
       <TestimonialsSection />
-      <Footer />
+   
     </>
   );
 }

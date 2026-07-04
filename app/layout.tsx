@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ThemeProvider from "@/component/theme-provider";
 import "./globals.css";
+import Navbar from "@/component/navbar";
+import Footer from "@/component/ui/footer";
 
 export const metadata: Metadata = {
   title: "Chandogya Prodigies",
@@ -15,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+         <Navbar />
         <ThemeProvider>{children}</ThemeProvider>
+        <Footer />
       </body>
     </html>
   );

@@ -1,10 +1,15 @@
+import Foundationsection from "@/component/foundation";
+import HeroSection from "@/component/hero-section";
+import StorySection from "@/component/story-section";
+
 export default function about() {
 
   return (
     <>
-    <h1>about page
-        
-    </h1>
+
+    <HeroSection />
+    <StorySection />
+    <Foundationsection/>
     </>
         );
 }
