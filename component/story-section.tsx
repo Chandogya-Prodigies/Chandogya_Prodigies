@@ -64,7 +64,7 @@ export default function StorySection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#FFFDF7_0%,#FFF9EE_42%,#F7EAD7_100%)] dark:bg-[radial-gradient(circle_at_50%_0%,#2A1910_0%,#21130C_42%,#160C07_100%)]" />
 
       <div className="relative z-10">
-        <div className="mx-auto mb-10  px-5 text-center sm:px-8">
+        <div className="mx-auto mb-10 px-5 text-center sm:px-8">
           <p className="font-serif text-sm font-semibold tracking-[0.22em] text-[#C96F1A] sm:text-base dark:text-[#D4A72C]">
             OUR STORY
           </p>

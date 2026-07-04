@@ -6,25 +6,56 @@ import { Brain, MessageCircle, Laptop, Sparkles } from "lucide-react";
 
 const skills = [
   {
-    title: "Thinking (Vivek Buddhi)",
-    desc: "Moving from memorization to independent thought and evaluating consequences.",
+    title: "YOGA & CONSCIOUSNESS STUDIES",
+    desc: "Develop self-regulation, resilience, and mind-body awareness",
     icon: Brain,
   },
   {
-    title: "Communication (Vak Shakti)",
-    desc: "Mastering clear, confident expression and the art of active listening.",
+    title: "AI & DHARMIC COMPUTING",
+    desc: "Ethical tech use, logical thinking, and understanding AI’s societal impact",
     icon: MessageCircle,
   },
   {
-    title: "AI & Technology",
-    desc: "Learning future-ready digital skills, AI basics and smart technology usage.",
+    title: "ARTHA ŚĀSTRA & MODERN FINANCE",
+    desc: " Financial literacy, resource ethics, and entrepreneurial mindset.",
     icon: Laptop,
   },
   {
-    title: "Personality Development",
-    desc: "Building confidence, discipline, emotional strength and leadership qualities.",
+    title: "DHARMA ŚĀSTRA & MODERN LAW",
+    desc: "Civic awareness, ethical reasoning, and rights-responsibility balance.",
     icon: Sparkles,
   },
+   {
+    title: "PRAKRITI VIJNANA (ECOLOGY & SUSTAINABILITY)",
+    desc: " Environmental stewardship, scientific temper, and holistic health.",
+    icon: Brain,
+  },
+  {
+    title: "KALA & CREATIVE INTELLIGENCE",
+    desc: "Creative expression, design thinking, and cultural appreciation.",
+    icon: MessageCircle,
+  },
+  {
+    title: "SANGAH & LEADERSHIP",
+    desc: "Teamwork, conflict resolution, and ethical leadership",
+    icon: Laptop,
+  },
+  {
+    title: "VĀK SHAKTI (COMMUNICATION & RHETORIC)",
+    desc: "Effective communication, public speaking, and active listening",
+    icon: Sparkles,
+  },
+   {
+    title: "ANCIENT FUTURISM & INNOVATION",
+    desc: "Systems thinking, innovation, and future-readiness.",
+    icon: Laptop,
+  },
+  {
+    title: "SVASTHYA & WELLNESS SCIENCE",
+    desc: " Holistic health awareness, preventive care, and mental wellness.",
+    icon: Sparkles,
+  },
+  
 ];
 
 export default function SkillsSection() {

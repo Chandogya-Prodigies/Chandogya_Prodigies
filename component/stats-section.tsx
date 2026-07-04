@@ -92,7 +92,7 @@ export default function StatsSection() {
       <div className="relative z-10">
         <div className="relative min-h-[640px] overflow-hidden border-y border-[#D4A72C]/25 bg-[#2E2118] sm:min-h-[560px] lg:min-h-[520px] dark:border-[#D4A72C]/20 dark:bg-[#0C0503]">
           <Image
-            src="/images/stat.png"
+            src="/images/bg.png"
             alt="Chandogya learning stats"
             fill
             priority
