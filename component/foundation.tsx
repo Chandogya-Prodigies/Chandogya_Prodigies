@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Foundationsection() {
   return (
-    <section className="relative overflow-hidden bg-[#F7C94A] py-24">
+    <section className="relative overflow-hidden bg-[#F7C94A] py-24 ">
       {/* Background */}
 
       <div className="absolute inset-0 bg-gradient-to-br from-[#F8D14F] via-[#F7C94A] to-[#F4C43E]" />
@@ -23,21 +23,21 @@ export default function Foundationsection() {
       <Image
         src="/images/flowers.png"
         alt=""
-        width={350}
-        height={350}
-        className="absolute bottom-0 left-0 w-72 lg:w-80"
+        width={300}
+        height={300}
+        className="absolute bottom-0 left-0 w-60 lg:w-75"
       />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-20 px-8 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-4xl grid-cols-1 items-center gap-20 lg:grid-cols-2">
 
         {/* Left */}
         <div className="flex justify-center">
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={320}
-            height={320}
-            className="w-60 lg:w-80"
+            width={400}
+            height={400}
+            className="w-80 lg:w-100"
           />
         </div>
 
@@ -48,7 +48,7 @@ export default function Foundationsection() {
             How it is formed :-
           </h2>
 
-          <p className="mt-10 text-2xl leading-[1.8] text-black font-serif">
+          <p className="mt-10 text-xl leading-[1.8] text-black font-serif">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Voluptatibus omnis saepe quisquam ducimus inventore deserunt
             impedit officiis, laboriosam doloremque, quae cumque repellendus.
