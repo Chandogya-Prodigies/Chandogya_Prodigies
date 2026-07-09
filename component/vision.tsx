@@ -56,7 +56,7 @@ export default function VisionSection() {
 
             <p className="max-w-3xl font-serif text-2xl leading-[1.6] text-black lg:text-[2rem]">
               To build a modern, skill-based education ecosystem rooted in the
-              Ancient Indian Knowledge System, reimagined for today's world. We
+              Ancient Indian Knowledge System, reimagined for today&apos;s world. We
               are not recreating the past. We are reviving its wisdom with
               modern execution.
             </p>
