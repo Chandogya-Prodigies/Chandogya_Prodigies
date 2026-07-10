@@ -31,13 +31,7 @@ export default function CustomerStories() {
         className="pointer-events-none absolute right-6 top-6 w-28 opacity-50 sm:w-36 lg:w-44"
       />
 
-      <Image
-        src="/images/flowers.png"
-        alt=""
-        width={190}
-        height={190}
-        className="pointer-events-none absolute bottom-0 left-0 w-32 opacity-50 lg:w-44"
-      />
+      
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
