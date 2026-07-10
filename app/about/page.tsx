@@ -3,9 +3,9 @@ import CustomerStories from "@/component/customersection";
 import Foundationsection from "@/component/foundation";
 import FounderNoteSection from "@/component/founder";
 import AboutHeroSection from "@/component/about-hero-section";
-import StorySection from "@/component/story-section";
+import AboutStorySection from "@/component/about-story-section";
+import MissionSection from "@/component/mission-section";
 import TeamSection from "@/component/teamsection";
-import VisionSection from "@/component/vision";
 
 export default function about() {
 
@@ -13,9 +13,9 @@ export default function about() {
     <>
 
     <AboutHeroSection />
-    <StorySection />
+    <AboutStorySection />
     <Foundationsection/>
-    <VisionSection/>
+    <MissionSection />
     <TeamSection/>
     <FounderNoteSection/>
     <CustomerStories/>

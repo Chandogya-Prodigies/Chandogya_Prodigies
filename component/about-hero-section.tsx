@@ -34,11 +34,7 @@ const cornerImages = [
   },
 ];
 
-const highlights = [
-  "Rooted in Indian wisdom",
-  "Built for modern skills",
-  "Guided by mentors",
-];
+
 
 export default function AboutHeroSection() {
   const reduceMotion = useReducedMotion();
@@ -159,16 +155,7 @@ export default function AboutHeroSection() {
             </Link>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3" aria-label="About highlights">
-            {highlights.map((item) => (
-              <span
-                key={item}
-                className="rounded-md border border-[#D4A72C]/25 bg-[#FFFDF7]/70 px-4 py-2.5 text-sm font-semibold text-[#6B5646] shadow-[0_10px_24px_rgba(95,52,8,0.06)] backdrop-blur-sm dark:border-[#D4A72C]/16 dark:bg-[#21130C]/70 dark:text-[#CDBB9E]"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
+   
         </motion.div>
       </div>
     </section>

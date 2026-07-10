@@ -23,15 +23,14 @@ const members = [
 
 export default function TeamSection() {
   return (
-    <section className="relative overflow-hidden bg-[#E8BC45] py-24">
-      {/* Decorative Flowers */}
-
+    <section className="relative overflow-hidden bg-[#F6BE45] py-16 text-black dark:bg-[#160C07] dark:text-[#F8EBCF]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(255,248,224,0.45),transparent_28%),radial-gradient(circle_at_86%_78%,rgba(196,74,32,0.18),transparent_30%),linear-gradient(135deg,#F8D86B_0%,#F6BE45_48%,#EBA13D_100%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(212,167,44,0.16),transparent_30%),linear-gradient(135deg,#160C07_0%,#21130C_58%,#132118_100%)]" />
       <Image
-        src="/images/leavy.png"
+        src="/images/leaves.png"
         alt=""
-        width={300}
-        height={500}
-        className="absolute left-0 top-0 w-52 lg:w-72"
+        width={220}
+        height={180}
+        className="pointer-events-none absolute left-6 top-6 w-28 opacity-55 sm:w-36 lg:w-44"
       />
 
       <Image
@@ -39,89 +38,82 @@ export default function TeamSection() {
         alt=""
         width={180}
         height={180}
-        className="absolute bottom-0 right-0 w-32 lg:w-44"
+        className="pointer-events-none absolute bottom-0 right-0 w-28 opacity-55 lg:w-40"
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        {/* Heading */}
-
-        <h2 className="mb-14 text-center font-serif text-5xl text-black lg:text-7xl">
-          The Help you need, when need it.
+        <p className="text-center font-serif text-sm font-semibold tracking-[0.24em] text-[#7A3A16] dark:text-[#D4A72C]">
+          OUR GUIDES
+        </p>
+        <h2 className="mx-auto mt-3 max-w-4xl text-center font-serif text-4xl font-semibold leading-tight text-black sm:text-5xl lg:text-6xl dark:text-[#F8EBCF]">
+          The People Behind Chandogya
         </h2>
 
-        {/* Main Container */}
-
-        <div className="rounded-[40px] bg-[#F4DC95] px-10 py-10 shadow-[0_20px_45px_rgba(0,0,0,0.08)]">
-          {/* Tabs */}
-
-          <div className="mb-12 flex flex-wrap items-center justify-center gap-10">
-            <button className="rounded-full bg-white px-10 py-3 text-xl font-medium shadow-md transition-all duration-300 hover:shadow-lg">
+        <div className="mt-10 rounded-[28px] border border-white/45 bg-[#F8DF98]/82 px-5 py-7 shadow-[0_20px_45px_rgba(84,47,12,0.12)] backdrop-blur-sm sm:px-7 lg:px-8 dark:border-[#D4A72C]/20 dark:bg-[#24150D]/82">
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-black/10 bg-white/40 p-2 shadow-inner sm:mx-auto sm:w-fit dark:border-[#D4A72C]/20 dark:bg-white/5">
+            <button className="rounded-full bg-[#315C45] px-5 py-2.5 text-sm font-semibold text-[#FFF8E6] shadow-[0_10px_22px_rgba(49,92,69,0.22)] transition-all duration-300 hover:bg-[#274A38] sm:px-7">
               Our best team
             </button>
 
-            <button className="text-xl font-medium transition hover:text-black/70">
+            <button className="rounded-full px-5 py-2.5 text-sm font-semibold text-black/70 transition hover:bg-white/45 hover:text-black sm:px-7 dark:text-[#F8EBCF]/75 dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]">
               Our Educators
             </button>
 
-            <button className="text-xl font-medium transition hover:text-black/70">
+            <button className="rounded-full px-5 py-2.5 text-sm font-semibold text-black/70 transition hover:bg-white/45 hover:text-black sm:px-7 dark:text-[#F8EBCF]/75 dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]">
               Our Partnerships
             </button>
           </div>
 
-          {/* Content */}
-
-          <div className="grid items-center gap-12 lg:grid-cols-[2.8fr_1fr]">
-            {/* Cards */}
-
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid items-center gap-8 lg:grid-cols-[2.7fr_1fr]">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {members.map((member, index) => (
                 <div
                   key={index}
-                  className="mx-auto w-full max-w-[290px] rounded-[28px] bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]"
+                  className="mx-auto w-full max-w-[270px] rounded-[20px] border border-[#DFAE45]/45 bg-[#FFF8E6] p-5 shadow-[0_12px_26px_rgba(84,47,12,0.12)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_34px_rgba(84,47,12,0.18)] dark:border-[#D4A72C]/20 dark:bg-[#1E120C]"
                 >
-                  <h3 className="mb-5 text-center text-xl font-semibold">
+                  <h3 className="mb-4 text-center font-serif text-xl font-semibold">
                     {member.name}
                   </h3>
 
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={180}
-                    height={180}
-                    className="mx-auto h-40 w-40 rounded-full object-cover"
-                  />
+                  <div className="mx-auto flex h-36 w-36 items-center justify-center rounded-full bg-[#E8D86B] p-2 shadow-inner">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={160}
+                      height={160}
+                      className="h-full w-full rounded-full object-cover"
+                    />
+                  </div>
 
-                  <div className="mt-6 flex items-center justify-between">
-                    <span className="text-xl font-medium">
+                  <div className="mt-5 flex items-center justify-between">
+                    <span className="text-base font-semibold text-black/78 dark:text-[#F8EBCF]/82">
                       {member.role}
                     </span>
 
-                    <button className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 bg-[#FAFAFA] transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
-                      <ArrowUpRight size={18} strokeWidth={2.4} />
+                    <button className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70 transition-all duration-300 hover:scale-105 hover:bg-[#315C45] hover:text-white dark:border-[#D4A72C]/20 dark:bg-white/10">
+                      <ArrowUpRight size={17} strokeWidth={2.4} />
                     </button>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Right Side */}
-
             <div className="flex items-center lg:pl-6">
               <div>
-                <h3 className="mb-5 font-serif text-4xl font-semibold leading-tight text-black lg:text-5xl">
-                  Enhancing the work by our supported team
+                <h3 className="mb-4 font-serif text-3xl font-semibold leading-tight text-black lg:text-4xl dark:text-[#F8EBCF]">
+                  Guided learning, personal attention.
                 </h3>
 
-                <p className="mb-8 text-lg leading-9 text-black/75">
-                  Enhancing the work by our supported team. We believe in
-                  creating an ecosystem where passionate educators, mentors and
-                  professionals work together to provide the best learning
-                  experience for every child.
+                <p className="mb-6 text-base leading-8 text-black/72 dark:text-[#F8EBCF]/72">
+                  Our mentors bring together subject clarity, skill practice and
+                  value-rooted guidance so every learner feels seen, challenged
+                  and supported through the journey.
                 </p>
 
-                <button className="group text-xl font-semibold text-black">
-                  Read More
-                  <span className="mt-1 block h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full" />
+                <button className="group inline-flex items-center gap-2 text-base font-semibold text-[#315C45] dark:text-[#D4A72C]">
+                  Meet the team
+                  <ArrowUpRight size={17} strokeWidth={2.4} />
+                  <span className="absolute mt-7 block h-[2px] w-0 bg-[#315C45] transition-all duration-300 group-hover:w-24 dark:bg-[#D4A72C]" />
                 </button>
               </div>
             </div>

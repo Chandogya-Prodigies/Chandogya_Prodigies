@@ -1,162 +1,118 @@
 "use client";
 
 import Image from "next/image";
+import { Quote, Star } from "lucide-react";
+
+const stories = [
+  {
+    quote:
+      "The sessions helped my child become more confident and disciplined. The learning feels personal, not rushed.",
+    name: "Parent of Aarav",
+    place: "Delhi",
+  },
+  {
+    quote:
+      "Chandogya brings a rare mix of clarity, values and practical skill building. My daughter now enjoys learning again.",
+    name: "Parent of Anaya",
+    place: "Mumbai",
+  },
+];
 
 export default function CustomerStories() {
   return (
-    <section className="relative overflow-hidden bg-[#F8DFB6] py-24">
+    <section className="relative overflow-hidden bg-[#F8D26A] py-16 text-black dark:bg-[#160C07] dark:text-[#F8EBCF]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_18%,rgba(255,248,224,0.42),transparent_30%),radial-gradient(circle_at_88%_80%,rgba(49,92,69,0.16),transparent_30%),linear-gradient(135deg,#F8D86B_0%,#F8C95A_50%,#EBA13D_100%)] dark:bg-[radial-gradient(circle_at_15%_18%,rgba(212,167,44,0.14),transparent_30%),linear-gradient(135deg,#160C07_0%,#21130C_56%,#132118_100%)]" />
 
-      <div className="mx-auto max-w-7xl">
+      <Image
+        src="/images/leaves.png"
+        alt=""
+        width={220}
+        height={180}
+        className="pointer-events-none absolute right-6 top-6 w-28 opacity-50 sm:w-36 lg:w-44"
+      />
 
-        <div className="grid lg:grid-cols-[0.95fr_1.45fr]">
+      <Image
+        src="/images/flowers.png"
+        alt=""
+        width={190}
+        height={190}
+        className="pointer-events-none absolute bottom-0 left-0 w-32 opacity-50 lg:w-44"
+      />
 
-          {/* LEFT */}
-
-          <div className="relative flex flex-col items-center justify-center border-r border-[#d5c2a2] px-10">
-
-            {/* Lotus */}
-
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[#FFF8E6]/70 shadow-[0_16px_34px_rgba(84,47,12,0.12)] dark:bg-white/10">
             <Image
               src="/images/lotus.png"
               alt=""
-              width={240}
-              height={240}
-              className="mb-10 w-56"
+              width={92}
+              height={92}
+              className="h-20 w-20 object-contain"
             />
-
-            <p className="text-2xl text-black">
-              look what shared by
-            </p>
-
-            <h2 className="mt-3 font-serif text-6xl text-[#7C2228]">
-              Dear customers
-            </h2>
-
-            <div className="mt-8 space-y-1 text-center">
-
-              <p className="text-4xl leading-tight">
-                Share your valuable
-              </p>
-
-              <p className="text-4xl leading-tight">
-                experience with us
-              </p>
-
-              <p className="mt-3 text-4xl">
-                Tag us on
-                <span className="text-[#7C2228] font-semibold">
-                  {" "}@Chandogya
-                </span>
-              </p>
-
-              <p className="text-4xl text-[#7C2228]">
-                Prodigies
-              </p>
-
-              <p className="text-4xl leading-tight">
-                to get a chance to
-              </p>
-
-              <p className="text-4xl">
-                be featured
-              </p>
-
-            </div>
-
-            {/* Bottom Flower */}
-
-            <Image
-              src="/images/flowers.png"
-              alt=""
-              width={180}
-              height={180}
-              className="absolute bottom-0 right-10 w-40"
-            />
-
           </div>
 
-          {/* RIGHT */}
+          <p className="font-serif text-sm font-semibold tracking-[0.24em] text-[#7A3A16] dark:text-[#D4A72C]">
+            LEARNER STORIES
+          </p>
 
-          <div className="relative px-14">
+          <h2 className="mt-3 max-w-xl font-serif text-4xl font-semibold leading-tight text-black sm:text-5xl lg:text-6xl dark:text-[#F8EBCF]">
+            What families feel after learning with us
+          </h2>
 
-            <div className="grid grid-cols-2 gap-16">
-
-              {/* IMAGE ONE */}
-
-              <div className="relative">
-
-                <Image
-                  src="/images/img.png"
-                  alt=""
-                  width={420}
-                  height={650}
-                  className="h-[620px] w-full object-cover"
-                />
-
-                {/* Review */}
-
-                <div className="absolute -bottom-14 left-1/2 w-[390px] -translate-x-1/2 bg-white p-8 shadow-xl">
-
-                  <p className="text-center text-[34px] italic font-serif leading-tight">
-                    “Mom says it sustainable,
-                    I said it comfy!”
-                  </p>
-
-                  <p className="mt-6 text-center text-2xl text-gray-500">
-                    — Dhruvi, Mumbai
-                  </p>
-
-                </div>
-
-                {/* Flower */}
-
-                <Image
-                  src="/images/small-flower.png"
-                  alt=""
-                  width={70}
-                  height={70}
-                  className="absolute bottom-20 right-0 w-16"
-                />
-
-              </div>
-
-              {/* IMAGE TWO */}
-
-              <div className="relative pt-6">
-
-                <Image
-                  src="/images/img.png"
-                  alt=""
-                  width={420}
-                  height={650}
-                  className="h-[620px] w-full object-cover"
-                />
-
-                {/* Floating Review */}
-
-                <div className="absolute -top-10 right-[-80px] w-[340px] bg-white p-6 shadow-xl">
-
-                  <p className="text-center text-[30px] italic font-serif leading-tight">
-                    “Mom says it sustainable,
-                    it comfy!”
-                  </p>
-
-                  <p className="mt-5 text-center text-xl text-gray-500">
-                    — Dhruvi, Mumbai
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
+          <p className="mt-5 max-w-xl text-base leading-8 text-black/72 dark:text-[#F8EBCF]/72">
+            Real growth is seen in confidence, consistency and curiosity. These
+            stories reflect the guided, value-rooted learning experience we are
+            building at Chandogya.
+          </p>
         </div>
 
-      </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {stories.map((story, index) => (
+            <article
+              key={story.name}
+              className={`relative overflow-hidden rounded-[28px] border border-white/45 bg-[#FFF8E6]/78 p-6 shadow-[0_20px_42px_rgba(84,47,12,0.12)] backdrop-blur-sm dark:border-[#D4A72C]/20 dark:bg-[#24150D]/78 ${
+                index === 1 ? "sm:mt-10" : ""
+              }`}
+            >
+              <div className="mb-5 flex items-center justify-between">
+                <div className="flex gap-1 text-[#D68B20] dark:text-[#D4A72C]">
+                  {Array.from({ length: 5 }).map((_, starIndex) => (
+                    <Star
+                      key={starIndex}
+                      className="h-4 w-4 fill-current"
+                      strokeWidth={1.8}
+                    />
+                  ))}
+                </div>
 
+                <Quote className="h-7 w-7 text-[#315C45]/45 dark:text-[#D4A72C]/45" />
+              </div>
+
+              <p className="font-serif text-xl leading-[1.55] text-black/84 dark:text-[#F8EBCF]/84">
+                &quot;{story.quote}&quot;
+              </p>
+
+              <div className="mt-7 flex items-center gap-4 border-t border-black/10 pt-5 dark:border-[#D4A72C]/20">
+                <Image
+                  src="/images/img.png"
+                  alt=""
+                  width={52}
+                  height={52}
+                  className="h-12 w-12 rounded-full border-2 border-[#E8D86B] object-cover"
+                />
+                <div>
+                  <p className="font-serif text-lg font-semibold text-black dark:text-[#F8EBCF]">
+                    {story.name}
+                  </p>
+                  <p className="text-sm font-medium tracking-[0.16em] text-black/50 dark:text-[#F8EBCF]/50">
+                    {story.place}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
