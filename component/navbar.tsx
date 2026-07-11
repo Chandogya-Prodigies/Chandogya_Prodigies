@@ -73,13 +73,13 @@ const megaMenus: Record<MenuKey, MegaMenu> = {
       {
         label: "Free Courses",
         description: "Start learning with open programmes",
-        href: "/courses/free",
+        href: "/courses?type=free",
         icon: BookOpen,
       },
       {
         label: "Premium Courses",
         description: "Structured, mentor-guided programmes",
-        href: "/courses/paid",
+        href: "/courses?type=paid",
         icon: GraduationCap,
       },
     ],

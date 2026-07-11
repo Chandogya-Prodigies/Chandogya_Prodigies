@@ -6,7 +6,20 @@ export default function CtaSection() {
   return (
     <section className="relative overflow-hidden bg-[#D97824] px-6 py-16 text-[#FFF8E6] dark:bg-[#160C07]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,248,224,0.22),transparent_30%),radial-gradient(circle_at_84%_78%,rgba(49,92,69,0.26),transparent_30%),linear-gradient(135deg,#B83216_0%,#D97824_48%,#F0A22A_100%)] dark:bg-[radial-gradient(circle_at_18%_18%,rgba(212,167,44,0.14),transparent_30%),linear-gradient(135deg,#160C07_0%,#21130C_56%,#132118_100%)]" />
-     x
+      <Image
+        src="/images/leaves.png"
+        alt=""
+        width={220}
+        height={180}
+        className="pointer-events-none absolute left-6 top-6 w-28 opacity-35 sm:w-36 lg:w-44"
+      />
+      <Image
+        src="/images/flowers.png"
+        alt=""
+        width={190}
+        height={190}
+        className="pointer-events-none absolute bottom-0 right-0 w-32 opacity-35 lg:w-44"
+      />
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
