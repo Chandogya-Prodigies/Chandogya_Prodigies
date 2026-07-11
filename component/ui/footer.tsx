@@ -1,23 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 
 const navLinks = [
-  "Home",
-  "About Us",
-  "Courses",
-  "The Learning model",
-  "Resources",
-  "Contact",
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Courses", href: "/courses" },
+  { label: "Learning Model", href: "/learning-model" },
+  { label: "Blogs", href: "/resources/blogs" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "X", href: "#", icon: "x" },
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "YouTube", href: "#", icon: "youtube" },
-  { label: "LinkedIn", href: "#", icon: "linkedin" },
+  { label: "Facebook", href: "https://www.facebook.com", icon: "facebook" },
+  { label: "X", href: "https://x.com", icon: "x" },
+  { label: "Instagram", href: "https://www.instagram.com", icon: "instagram" },
+  { label: "YouTube", href: "https://www.youtube.com", icon: "youtube" },
+  { label: "LinkedIn", href: "https://www.linkedin.com", icon: "linkedin" },
 ];
 
 function SocialIcon({ icon }: { icon: string }) {
@@ -82,85 +82,155 @@ function SocialIcon({ icon }: { icon: string }) {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#F6B65A] px-6 py-16 dark:bg-[#170A04]">
+    <footer className="relative overflow-hidden bg-[#EEF4E8] text-[#21382C] dark:bg-[#100905] dark:text-[#FFF9EE]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_20%,rgba(49,92,69,0.16),transparent_30%),radial-gradient(circle_at_86%_18%,rgba(233,150,47,0.18),transparent_26%),linear-gradient(180deg,#F8F1E5_0%,#EEF4E8_100%)] dark:bg-[radial-gradient(circle_at_14%_20%,rgba(212,167,44,0.16),transparent_30%),linear-gradient(180deg,#160C07_0%,#100905_100%)]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#315C45]/35 to-transparent dark:via-[#D4A72C]/50" />
       <Image
         src="/images/pretflower.png"
         alt=""
-        width={260}
-        height={260}
-        className="pointer-events-none absolute bottom-0 left-0 opacity-85"
+        width={300}
+        height={300}
+        className="pointer-events-none absolute -bottom-12 -left-16 opacity-15 dark:invert"
+      />
+      <Image
+        src="/images/lotus.png"
+        alt=""
+        width={150}
+        height={150}
+        className="pointer-events-none absolute right-10 top-10 opacity-10 dark:invert"
       />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 md:grid-cols-3">
-        <div>
-          <h3 className="font-serif text-3xl font-bold text-[#8E2F2F] dark:text-[#D4AF37]">
-            Chandogya Prodogies
-          </h3>
+      <div className="relative z-10 mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:py-16">
+        <div className="grid gap-10 border-b border-[#315C45]/18 pb-12 dark:border-white/12 lg:grid-cols-[1.1fr_0.7fr_0.85fr_1fr]">
+          <div>
+            <Link href="/" className="inline-flex items-center gap-3">
+              <Image
+                src="/images/logo.png"
+                alt=""
+                width={72}
+                height={72}
+                className="h-16 w-16 object-contain"
+              />
+              <span className="text-3xl font-bold leading-tight tracking-[-0.01em] text-[#315C45] dark:text-[#F8EBCF]">
+                Chandogya Prodigies
+              </span>
+            </Link>
 
-          <p className="mt-6 max-w-sm text-xl font-medium leading-snug text-[#2D2118] dark:text-[#F8E7B0]">
-            explore the models to enroll easily.Get the premium courses in
-            affordable ranges explore the models to enroll easily.Get the
-            premium courses in affordable ranges explore the models to enroll
-            easily.Get the
-          </p>
-        </div>
+            <p className="mt-6 max-w-sm text-base leading-7 text-[#5F6D61] dark:text-[#D8C9B7]">
+              Gurukul-inspired skill learning for children, blending wisdom,
+              discipline and modern mentorship.
+            </p>
 
-        <div>
-          <h3 className="font-serif text-3xl font-bold text-[#8E2F2F] dark:text-[#D4AF37]">
-            Nav Links
-          </h3>
-
-          <ul className="mt-5 space-y-2">
-            {navLinks.map((item) => (
-              <li key={item}>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {socialLinks.map((item) => (
                 <Link
-                  href="/"
-                  className="text-xl font-semibold text-[#2D2118] transition hover:text-[#8E2F2F] dark:text-[#F8E7B0]"
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#315C45]/16 bg-white/70 text-[#315C45] shadow-sm transition hover:-translate-y-1 hover:border-[#315C45] hover:bg-[#315C45] hover:text-white dark:border-white/14 dark:bg-white/6 dark:text-[#F8EBCF] dark:hover:border-[#D4A72C] dark:hover:bg-[#D4A72C] dark:hover:text-[#160C07]"
                 >
-                  {item}
+                  <SocialIcon icon={item.icon} />
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-serif text-3xl font-bold text-[#8E2F2F] dark:text-[#D4AF37]">
-            Social Links
-          </h3>
-
-          <div className="mt-5 flex flex-wrap gap-3">
-            {socialLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                aria-label={item.label}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg font-bold text-[#2D2118] shadow-md transition hover:-translate-y-1 hover:bg-[#8E2F2F] hover:text-white"
-              >
-                <SocialIcon icon={item.icon} />
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <div className="mt-12">
-            <h3 className="font-serif text-3xl font-bold text-[#8E2F2F] dark:text-[#D4AF37]">
-              Subscribe to our Newsletter
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-[#315C45] dark:text-[#D4A72C]">
+              Explore
             </h3>
 
-            <form className="mt-5 flex max-w-md items-center rounded-full bg-white px-5 py-3 shadow-lg">
+            <ul className="mt-5 space-y-3">
+              {navLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium text-[#5F6D61] transition hover:text-[#C96F1A] dark:text-[#D8C9B7] dark:hover:text-[#D4A72C]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-[#315C45] dark:text-[#D4A72C]">
+              Contact
+            </h3>
+
+            <div className="mt-5 grid gap-4 text-sm text-[#5F6D61] dark:text-[#D8C9B7]">
+              <a
+                href="mailto:hello@chandogyaprodigies.com"
+                className="flex items-start gap-3 transition hover:text-[#C96F1A] dark:hover:text-[#D4A72C]"
+              >
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#C96F1A] dark:text-[#D4A72C]" />
+                hello@chandogyaprodigies.com
+              </a>
+              <a
+                href="tel:+919999999999"
+                className="flex items-start gap-3 transition hover:text-[#C96F1A] dark:hover:text-[#D4A72C]"
+              >
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#C96F1A] dark:text-[#D4A72C]" />
+                +91 99999 99999
+              </a>
+              <p className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#C96F1A] dark:text-[#D4A72C]" />
+                India based online, offline and hybrid learning support.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-[#315C45] dark:text-[#D4A72C]">
+              Stay Inspired
+            </h3>
+            <p className="mt-5 text-sm leading-6 text-[#5F6D61] dark:text-[#D8C9B7]">
+              Receive learning notes, demo updates and thoughtful course
+              guidance.
+            </p>
+
+            <form className="mt-5 flex max-w-md items-center rounded-full border border-[#315C45]/16 bg-white/78 px-4 py-2 shadow-[0_18px_48px_rgba(49,92,69,0.12)] dark:border-white/14 dark:bg-white/8 dark:shadow-[0_18px_48px_rgba(0,0,0,0.16)]">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-transparent text-[#2D2118] outline-none placeholder:text-[#2D2118]/50"
+                className="min-w-0 flex-1 bg-transparent px-2 text-sm text-[#21382C] outline-none placeholder:text-[#6C7A70]/55 dark:text-[#FFF9EE] dark:placeholder:text-[#D8C9B7]/55"
               />
 
               <button
                 type="submit"
-                className="flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-[#F6B65A]"
+                aria-label="Subscribe"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#315C45] text-white transition hover:bg-[#C96F1A] dark:bg-[#D4A72C] dark:text-[#160C07] dark:hover:bg-[#F8EBCF]"
               >
-                <ArrowRight className="h-7 w-7 text-[#2D2118]" />
+                <ArrowRight className="h-5 w-5" />
               </button>
             </form>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 pt-7 text-sm text-[#6C7A70] dark:text-[#AFA08D] sm:flex-row sm:items-center sm:justify-between">
+          <p>(c) 2026 Chandogya Prodigies. All rights reserved.</p>
+          <div className="flex gap-5">
+            <Link
+              href="/resources/faqs"
+              className="transition hover:text-[#C96F1A] dark:hover:text-[#D4A72C]"
+            >
+              FAQs
+            </Link>
+            <Link
+              href="/contact"
+              className="transition hover:text-[#C96F1A] dark:hover:text-[#D4A72C]"
+            >
+              Support
+            </Link>
+            <Link
+              href="/resources/blogs"
+              className="transition hover:text-[#C96F1A] dark:hover:text-[#D4A72C]"
+            >
+              Blogs
+            </Link>
           </div>
         </div>
       </div>

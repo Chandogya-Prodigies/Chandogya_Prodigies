@@ -67,7 +67,7 @@ const megaMenus: Record<MenuKey, MegaMenu> = {
       {
         label: "Demo Classes",
         description: "Experience a lesson before enrolling",
-        href: "/courses/demos",
+        href: "/demo-videos",
         icon: PlayCircle,
       },
       {
@@ -116,12 +116,7 @@ const megaMenus: Record<MenuKey, MegaMenu> = {
         href: "/learning-model/hybrid",
         icon: Sparkles,
       },
-      {
-        label: "Mentor Experience",
-        description: "Understand our guided learning approach",
-        href: "/learning-model/mentors",
-        icon: Handshake,
-      },
+     
     ],
     featured: {
       label: "Our approach",
@@ -300,13 +295,7 @@ export default function Navbar() {
             </button>
           ))}
 
-          <Link
-            href="/resources/schools"
-            onMouseEnter={() => setActiveMenu(null)}
-            className="rounded-md px-3 py-2 text-md font-semibold text-[#3C291C] transition hover:bg-white hover:text-[#2E2118] dark:text-[#E9D5B7] dark:hover:bg-white/10 dark:hover:text-[#F8EBCF]"
-          >
-            Partnerships
-          </Link>
+       
           <Link
             href="/contact"
             onMouseEnter={() => setActiveMenu(null)}

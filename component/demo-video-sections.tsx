@@ -25,7 +25,7 @@ const videos = [
     views: "12K views",
     duration: "12:45",
     thumbnail: "/images/demo-1.png",
-    slug: "critical-thinking-demo",
+    href: "/courses/creative-critical-thinking",
   },
   {
     title: "Public Speaking Demo",
@@ -33,7 +33,7 @@ const videos = [
     views: "18K views",
     duration: "15:30",
     thumbnail: "/images/demo-2.png",
-    slug: "public-speaking-demo",
+    href: "/courses/communication-public-speaking",
   },
   {
     title: "AI & Technology Demo",
@@ -41,7 +41,7 @@ const videos = [
     views: "21K views",
     duration: "10:32",
     thumbnail: "/images/demo-3.png",
-    slug: "ai-technology-demo",
+    href: "/courses/ai-foundations",
   },
 ];
 
@@ -139,9 +139,9 @@ export default function DemoVideoSection() {
             className="pb-14"
           >
             {videos.map((video) => (
-              <SwiperSlide key={video.slug}>
+              <SwiperSlide key={video.href}>
                 <Link
-                  href={`/demo-videos/${video.slug}`}
+                  href={video.href}
                   className="group block"
                 >
                   <div className="overflow-hidden rounded-[28px] border border-white/40 bg-[#FFF4D8]/40 p-3 shadow-[0_20px_45px_rgba(70,38,6,0.25)] backdrop-blur-md transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_30px_70px_rgba(70,38,6,0.35)]">
