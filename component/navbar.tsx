@@ -186,7 +186,7 @@ const menuTriggers: Array<{ key: MenuKey; label: string }> = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const headerRef = useRef<HTMLElement>(null);
   const [activeMenu, setActiveMenu] = useState<MenuKey | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -327,7 +327,9 @@ export default function Navbar() {
 
           <button
             type="button"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
             aria-label="Toggle colour theme"
             className="flex h-10 w-10 items-center justify-center rounded-md text-[#3C291C] transition hover:bg-white/25 dark:text-[#E9D5B7] dark:hover:bg-white/10"
           >

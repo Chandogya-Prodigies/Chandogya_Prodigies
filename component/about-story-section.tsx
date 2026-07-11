@@ -15,18 +15,18 @@ const stories = [
     title: "More Than Memorization",
     text: "Children learn facts every day, but they also need clarity, confidence, curiosity and values to use knowledge wisely.",
     cloudClass:
-      "left-1/2 top-8 w-[min(86vw,480px)] lg:left-[32%] lg:top-[-7%] lg:w-[520px]",
-    contentClass: "px-12 pb-4 pt-16 sm:px-18 sm:pt-20 lg:px-22 lg:pt-23",
+      "left-1/2 top-8 w-[min(86vw,480px)] lg:left-[32%] lg:top-[-7%] lg:w-[530px]",
+    contentClass: "px-10 pb-4 pt-16 sm:px-18 sm:pt-20 lg:px-22 lg:pt-23",
   },
   {
     video: "/videos/video02.mp4",
     cloud: "/images/clouds.png",
     label: "The Calling",
-    title: "A Return to Guided Learning",
+    title: "Return to Guided Learning",
     text: "Chandogya was created to bring mentorship, discipline and thoughtful learning back into a modern child's journey.",
     cloudClass:
-      "left-1/2 top-8 w-[min(86vw,500px)] lg:left-[76%] lg:top-[-8%] lg:w-[540px]",
-    contentClass: "px-11 pb-4 pt-18 sm:px-18 sm:pt-20 lg:px-22 lg:pt-23",
+      "left-1/2 top-8 w-[min(87vw,520px)] lg:left-[76%] lg:top-[-8%] lg:w-[570px]",
+    contentClass: "px-9 pb-4 pt-18 sm:px-18 sm:pt-20 lg:px-22 lg:pt-23",
   },
   {
     video: "/videos/video03.mp4",
@@ -35,8 +35,8 @@ const stories = [
     title: "Wisdom With Modern Skills",
     text: "We combine Indian wisdom with communication, critical thinking, technology awareness and personality development.",
     cloudClass:
-      "left-1/2 top-8 w-[min(86vw,500px)] lg:left-[25%] lg:top-[-8%] lg:w-[540px]",
-    contentClass: "px-12 pb-4 pt-16 sm:px-18 sm:pt-20 lg:px-22 lg:pt-23",
+      "left-1/2 top-8 w-[min(86vw,500px)] lg:left-[25%] lg:top-[-8%] lg:w-[580px]",
+    contentClass: "px-9 pb-3 pt-20 sm:px-17 sm:pt-20 lg:px-20 lg:pt-23",
   },
 ];
 
