@@ -47,7 +47,7 @@ const videos = [
 
 export default function DemoVideoSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f3a548eb] px-6 py-20 dark:bg-[#170A04]">
+    <section className="relative overflow-hidden bg-[#F6B25A] px-6 py-20 dark:bg-[#170A04]">
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.25),transparent_35%)]" />
 
@@ -150,6 +150,7 @@ export default function DemoVideoSection() {
                         src={video.thumbnail}
                         alt={video.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition duration-500 group-hover:scale-110"
                       />
 
@@ -183,6 +184,14 @@ export default function DemoVideoSection() {
 
           <div className="demo-pagination mt-2 flex justify-center gap-2" />
         </div>
+
+        <Link
+          href="/demo-videos"
+          className="mt-4 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]"
+        >
+          View All Demo Videos
+          <ChevronRight className="h-4 w-4" />
+        </Link>
       </div>
     </section>
   );

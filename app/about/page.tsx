@@ -7,19 +7,17 @@ import AboutStorySection from "@/component/about-story-section";
 import MissionSection from "@/component/mission-section";
 import TeamSection from "@/component/teamsection";
 
-export default function about() {
-
+export default function About() {
   return (
     <>
-
-    <AboutHeroSection />
-    <AboutStorySection />
-    <Foundationsection/>
-    <MissionSection />
-    <TeamSection/>
-    <FounderNoteSection/>
-    <CustomerStories/>
-    <CtaSection/>
+      <AboutHeroSection />
+      <AboutStorySection />
+      <Foundationsection />
+      <MissionSection />
+      <TeamSection />
+      <FounderNoteSection />
+      <CustomerStories />
+      <CtaSection />
     </>
-        );
+  );
 }

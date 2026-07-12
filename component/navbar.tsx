@@ -12,7 +12,6 @@ import {
   ChevronDown,
   CircleHelp,
   GraduationCap,
-  Handshake,
   Laptop,
   LayoutGrid,
   Menu,
@@ -295,7 +294,7 @@ export default function Navbar() {
             </button>
           ))}
 
-       
+     
           <Link
             href="/contact"
             onMouseEnter={() => setActiveMenu(null)}

@@ -28,7 +28,7 @@ const courses = [
     mentor: "Sarah Johnson",
     rating: "4.8",
     reviews: "320 Reviews",
-    slug: "advanced-communication-skills",
+    slug: "communication-public-speaking",
   },
   {
     title: "Creative & Critical Thinking Skills Masterclass",
@@ -50,7 +50,7 @@ const courses = [
     mentor: "Chandogya Mentor",
     rating: "4.7",
     reviews: "260 Reviews",
-    slug: "personality-development",
+    slug: "offline-gurukul-lab",
   },
   {
     title: "AI & Technology Skills for Curious Learners",
@@ -61,7 +61,7 @@ const courses = [
     mentor: "Chandogya Mentor",
     rating: "4.8",
     reviews: "210 Reviews",
-    slug: "ai-technology-skills",
+    slug: "ai-foundations",
   },
 ];
 
@@ -198,16 +198,26 @@ export default function LovedCoursesSection() {
                         </div>
                       </div>
 
-                      <button className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-[#315C45] px-4 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition group-hover:bg-[#274B38]">
+                      <span className="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-[#315C45] px-4 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition group-hover:bg-[#274B38]">
                         Enroll Now
                         <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                      </button>
+                      </span>
                     </div>
                   </article>
                 </Link>
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/courses"
+            className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]"
+          >
+            View All Courses
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

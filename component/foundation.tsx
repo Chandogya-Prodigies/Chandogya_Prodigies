@@ -11,7 +11,6 @@ const foundationLines = [
   "Modern skills shaped by timeless values.",
 ];
 
-
 export default function Foundationsection() {
   const [activeLine, setActiveLine] = useState(0);
 
@@ -133,17 +132,9 @@ export default function Foundationsection() {
           <p className="mt-4 max-w-2xl text-base leading-7 text-[#5E432C] dark:text-[#CDBB9E]">
             Chandogya Prodigies was formed to bring depth back into learning:
             not only what children study, but how they think, communicate,
-            choose and grow.
-             Chandogya Prodigies was formed to bring depth back into learning:
-            not only what children study, but how they think, communicate,
-            choose and grow.
-             Chandogya Prodigies was formed to bring depth back into learning:
-            not only what children study, but how they think, communicate,
-            choose and grow. Chandogya Prodigies was formed to bring depth back into learning:
-            not only what children study, but how they think, communicate,
-            choose and grow.
+            choose and grow. This foundation guides every course, mentor
+            interaction and learning model we create.
           </p>
-
         </div>
       </div>
     </section>

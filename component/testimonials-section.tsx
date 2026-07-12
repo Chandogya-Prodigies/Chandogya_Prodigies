@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Quote, Star } from "lucide-react";
+import { ArrowRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -74,6 +75,14 @@ export default function TestimonialsSection() {
             </p>
 
             <div className="mt-5 h-px w-20 bg-[#D4A72C]/65" />
+
+            <Link
+              href="/resources/testimonials"
+              className="mt-6 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]"
+            >
+              Read More Stories
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div>

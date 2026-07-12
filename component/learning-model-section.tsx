@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -11,6 +12,7 @@ const models = {
     eyebrow: "Online Learning",
     title: "Learn From Anywhere",
     image: "/images/images.jpg",
+    href: "/learning-model/online",
     description:
       "A flexible digital learning experience where students access lessons, assignments, quizzes and live mentorship from home.",
     points: [
@@ -25,6 +27,7 @@ const models = {
     eyebrow: "Offline Gurukul",
     title: "Learn Through Experience",
     image: "/images/offline.jpg",
+    href: "/learning-model/offline",
     description:
       "A Gurukul-inspired offline model where students learn through workshops, mentor guidance, practical activities and real-world skill practice.",
     points: [
@@ -39,6 +42,7 @@ const models = {
     eyebrow: "Hybrid Model",
     title: "Best of Both Worlds",
     image: "/images/kit.jpg",
+    href: "/learning-model/hybrid",
     description:
       "A blended learning approach combining online flexibility with offline Gurukul experiences for a complete skill-building journey.",
     points: [
@@ -157,10 +161,13 @@ export default function LearningModelSection() {
                 ))}
               </div>
 
-              <button className="mt-6 inline-flex h-11 w-fit items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]">
+              <Link
+                href={model.href}
+                className="mt-6 inline-flex h-11 w-fit items-center justify-center gap-2 rounded-md bg-[#315C45] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,92,69,0.18)] transition hover:bg-[#274B38]"
+              >
                 Explore Model
                 <ArrowRight className="h-4 w-4" />
-              </button>
+              </Link>
             </motion.div>
           </AnimatePresence>
         </div>

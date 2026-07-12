@@ -55,7 +55,7 @@ export default function MissionSection() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative flex min-h-[360px] items-center justify-center lg:min-h-[470px]">
-          <p className="absolute left-1/2 top-0 z-20 -translate-x-1/2 whitespace-nowrap font-serif text-2xl font-semibold tracking-wide text-black sm:text-3xl dark:text-[#D4A72C]">
+          <p className="absolute left-1/2 top-0 z-20 -translate-x-1/2 whitespace-nowrap font-serif text-2xl font-semibold tracking-wide text-[#2E2118] sm:text-3xl dark:text-[#D4A72C]">
             ज्ञान • संस्कार • कौशल
           </p>
 
@@ -119,11 +119,11 @@ export default function MissionSection() {
                 {slide.eyebrow}
               </p>
 
-              <h2 className="mt-3 font-serif text-6xl font-semibold leading-none text-black sm:text-7xl lg:text-8xl dark:text-[#F8EBCF]">
+              <h2 className="mt-3 font-serif text-6xl font-semibold leading-none text-[#2E2118] sm:text-7xl lg:text-8xl dark:text-[#F8EBCF]">
                 {slide.title}
               </h2>
 
-              <p className="mx-auto mt-8 max-w-3xl font-serif text-2xl leading-[1.45] text-black sm:text-[1.7rem] lg:mx-0 dark:text-[#F8EBCF]">
+              <p className="mx-auto mt-8 max-w-3xl font-serif text-2xl leading-[1.45] text-[#2E2118] sm:text-[1.7rem] lg:mx-0 dark:text-[#F8EBCF]">
                 {slide.text}
               </p>
             </motion.div>

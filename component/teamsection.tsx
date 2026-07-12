@@ -1,25 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
-const members = [
-  {
-    name: "Yamini Sharma",
-    role: "Leader",
-    image: "/images/img.png",
-  },
-  {
-    name: "Yamini Sharma",
-    role: "Leader",
-    image: "/images/img.png",
-  },
-  {
-    name: "Yamini Sharma",
-    role: "Leader",
-    image: "/images/img.png",
-  },
-];
+import { guides } from "@/lib/guides";
 
 export default function TeamSection() {
   return (
@@ -45,7 +29,7 @@ export default function TeamSection() {
         <p className="text-center font-serif text-sm font-semibold tracking-[0.24em] text-[#7A3A16] dark:text-[#D4A72C]">
           OUR GUIDES
         </p>
-        <h2 className="mx-auto mt-3 max-w-4xl text-center font-serif text-4xl font-semibold leading-tight text-black sm:text-5xl lg:text-6xl dark:text-[#F8EBCF]">
+        <h2 className="mx-auto mt-3 max-w-4xl text-center font-serif text-4xl font-semibold leading-tight text-[#2E2118] sm:text-5xl lg:text-6xl dark:text-[#F8EBCF]">
           The People Behind Chandogya
         </h2>
 
@@ -66,12 +50,13 @@ export default function TeamSection() {
 
           <div className="grid items-center gap-8 lg:grid-cols-[2.7fr_1fr]">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {members.map((member, index) => (
-                <div
-                  key={index}
-                  className="mx-auto w-full max-w-[270px] rounded-[20px] border border-[#DFAE45]/45 bg-[#FFF8E6] p-5 shadow-[0_12px_26px_rgba(84,47,12,0.12)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_34px_rgba(84,47,12,0.18)] dark:border-[#D4A72C]/20 dark:bg-[#1E120C]"
+              {guides.map((member) => (
+                <Link
+                  key={member.slug}
+                  href={`/about/guides/${member.slug}`}
+                  className="group mx-auto block w-full max-w-[270px] rounded-[20px] border border-[#DFAE45]/45 bg-[#FFF8E6] p-5 shadow-[0_12px_26px_rgba(84,47,12,0.12)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#315C45]/35 hover:shadow-[0_18px_34px_rgba(84,47,12,0.18)] dark:border-[#D4A72C]/20 dark:bg-[#1E120C]"
                 >
-                  <h3 className="mb-4 text-center font-serif text-xl font-semibold">
+                  <h3 className="mb-4 text-center font-serif text-xl font-semibold text-[#2E2118] dark:text-[#F8EBCF]">
                     {member.name}
                   </h3>
 
@@ -90,17 +75,20 @@ export default function TeamSection() {
                       {member.role}
                     </span>
 
-                    <button className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70 transition-all duration-300 hover:scale-105 hover:bg-[#315C45] hover:text-white dark:border-[#D4A72C]/20 dark:bg-white/10">
+                    <span
+                      aria-hidden="true"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#315C45] group-hover:text-white dark:border-[#D4A72C]/20 dark:bg-white/10"
+                    >
                       <ArrowUpRight size={17} strokeWidth={2.4} />
-                    </button>
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
             <div className="flex items-center lg:pl-6">
               <div>
-                <h3 className="mb-4 font-serif text-3xl font-semibold leading-tight text-black lg:text-4xl dark:text-[#F8EBCF]">
+                <h3 className="mb-4 font-serif text-3xl font-semibold leading-tight text-[#2E2118] lg:text-4xl dark:text-[#F8EBCF]">
                   Guided learning, personal attention.
                 </h3>
 
@@ -110,11 +98,14 @@ export default function TeamSection() {
                   and supported through the journey.
                 </p>
 
-                <button className="group inline-flex items-center gap-2 text-base font-semibold text-[#315C45] dark:text-[#D4A72C]">
+                <Link
+                  href="/contact"
+                  className="group relative inline-flex items-center gap-2 text-base font-semibold text-[#315C45] dark:text-[#D4A72C]"
+                >
                   Meet the team
                   <ArrowUpRight size={17} strokeWidth={2.4} />
                   <span className="absolute mt-7 block h-[2px] w-0 bg-[#315C45] transition-all duration-300 group-hover:w-24 dark:bg-[#D4A72C]" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

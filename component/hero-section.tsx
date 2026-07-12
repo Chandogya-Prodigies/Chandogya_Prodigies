@@ -130,7 +130,7 @@ export default function HeroSection() {
           className="mt-3"
         >
           <p className="font-serif text-sm font-semibold text-[#C96F1A] sm:text-base dark:text-[#D4A72C]">
-            विद्या दादाती विनायम
+            विद्या ददाति विनयम्
           </p>
           <div className="mx-auto mt-2 h-px w-16 bg-[#D4A72C]/65" />
         </motion.div>
@@ -174,13 +174,22 @@ export default function HeroSection() {
           }}
           className="mt-3 flex flex-col items-center gap-4"
         >
-          <Link
-            href="/courses"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#315C45] px-6 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(49,92,69,0.2)] transition hover:bg-[#274B38] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFF9EE] dark:focus-visible:ring-offset-[#160C07]"
-          >
-            Start Learning
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <Link
+              href="/courses"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#315C45] px-6 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(49,92,69,0.2)] transition hover:bg-[#274B38] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFF9EE] dark:focus-visible:ring-offset-[#160C07]"
+            >
+              Start Learning
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+
+            <Link
+              href="/demo-videos"
+              className="inline-flex h-12 items-center justify-center rounded-md border border-[#315C45]/18 bg-[#FFFDF7]/82 px-6 text-sm font-semibold text-[#315C45] shadow-[0_10px_28px_rgba(95,52,8,0.08)] backdrop-blur-sm transition hover:border-[#C96F1A] hover:text-[#C96F1A] dark:border-[#D4A72C]/18 dark:bg-[#21130C]/82 dark:text-[#F8EBCF] dark:hover:text-[#D4A72C]"
+            >
+              Watch Demo
+            </Link>
+          </div>
 
           <div className="flex items-center gap-3" aria-label="Hero slides">
             {slides.map((slide, index) => (
